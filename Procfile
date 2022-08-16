@@ -1,1 +1,1 @@
-web: java -jar build/libs/rest-starter.jar
+web: java -jar build/libs/rest-starter-1.0.0.jar
