@@ -1,0 +1,5 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: "jdbc:${CLEARDB_DATABASE_URL}"
+    type: com.zaxxer.hikari.HikariDataSource

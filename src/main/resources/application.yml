@@ -1,7 +1,26 @@
+spring:
+  profiles:
+    group:
+      local:
+        - db
+        - h2
+      prod:
+        - db
+        - mysql
+  messages:
+    encoding: UTF-8
+  web:
+    locale: jp
+  jackson:
+    serialization:
+      FAIL_ON_EMPTY_BEANS: false
+      WRITE_ENUMS_USING_TO_STRING: true
+
+
+
 server:
   port: ${PORT:8080}
 
 logging:
   level:
     org.springframework: INFO
-

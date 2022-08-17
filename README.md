@@ -1,17 +1,21 @@
 # REST STARTER
 
 ## Running Locally
-Make sure you have Java and Maven installed.  Also, install the [Heroku CLI](https://cli.heroku.com/).
+
+Make sure you have Java and Maven installed. Also, install the [Heroku CLI](https://cli.heroku.com/).
 
 ```bash
+$ heroku create rest-starter 
+$ heroku addons:create cleardb:ignite
+$ heroku config:get CLEARDB_DATABASE_URL  -s  >> .env
+
 $ ./gradlew clean build
 $ heroku local:start --port=8080
 ```
 
 ## Deploying to Heroku
+
 ```bash
-$ heroku create rest-starter 
-$ heroku addons:create cleardb:ignite
 $ git push heroku main
 $ heroku open
 ```
