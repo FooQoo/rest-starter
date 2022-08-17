@@ -18,12 +18,15 @@ dependencies {
             "org.springframework.boot:spring-boot-starter-web",
             // mysql
             'org.springframework.boot:spring-boot-starter-data-jpa',
-            'org.springframework.boot:spring-boot-starter-jdbc',
-            'com.h2database:h2',
-            'mysql:mysql-connector-java',
+
     )
     compileOnly(
             'org.projectlombok:lombok',
+    )
+    runtimeOnly(
+            'com.h2database:h2',
+            'mysql:mysql-connector-java',
+            'org.springframework.boot:spring-boot-starter-jdbc',
     )
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation(
