@@ -4,6 +4,7 @@ spring:
       local:
         - db
         - h2
+        - dev-tool
       prod:
         - db
         - mysql
@@ -15,8 +16,8 @@ spring:
     serialization:
       FAIL_ON_EMPTY_BEANS: false
       WRITE_ENUMS_USING_TO_STRING: true
-
-
+  jpa:
+    open-in-view: false
 
 server:
   port: ${PORT:8080}

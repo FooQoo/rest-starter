@@ -10,7 +10,7 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor(staticName = "of")
 @Getter
 public class MemberListResponse implements Serializable {
-    
+
     @Serial
     private static final long serialVersionUID = -116789077993324331L;
 
