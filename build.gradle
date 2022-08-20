@@ -2,7 +2,7 @@ import org.springframework.boot.gradle.plugin.SpringBootPlugin
 
 buildscript {
     ext {
-        spockVersion = "2.1-groovy-2.5"
+        spockVersion = "2.1-groovy-3.0"
         springVersion = '2.7.3'
     }
 }
