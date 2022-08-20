@@ -1,7 +1,23 @@
+import org.springframework.boot.gradle.plugin.SpringBootPlugin
+
+buildscript {
+    ext {
+        spockVersion = "2.1-groovy-2.5"
+        springVersion = '2.7.3'
+    }
+}
+
 plugins {
-    id 'org.springframework.boot' version '2.7.3'
-    id 'io.spring.dependency-management' version '1.0.13.RELEASE'
+    id 'org.springframework.boot' version "${springVersion}" apply false
     id 'java'
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+dependencyManagement {
+    imports {
+        mavenBom SpringBootPlugin.BOM_COORDINATES
+    }
 }
 
 repositories {
@@ -18,7 +34,6 @@ dependencies {
             "org.springframework.boot:spring-boot-starter-web",
             // mysql
             'org.springframework.boot:spring-boot-starter-data-jpa',
-
     )
     compileOnly(
             'org.projectlombok:lombok',
@@ -27,12 +42,16 @@ dependencies {
             'com.h2database:h2',
             'mysql:mysql-connector-java',
             'org.springframework.boot:spring-boot-starter-jdbc',
+            'org.springframework.boot:spring-boot-devtools'
     )
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation(
-            'org.springframework.boot:spring-boot-starter-test'
+            'org.springframework.boot:spring-boot-starter-test',
+            // spock
+            "org.spockframework:spock-core:${spockVersion}",
+            // spock for spring boot
+            "org.spockframework:spock-spring:${spockVersion}",
     )
-    developmentOnly 'org.springframework.boot:spring-boot-devtools'
 }
 
 tasks.named('test') {
