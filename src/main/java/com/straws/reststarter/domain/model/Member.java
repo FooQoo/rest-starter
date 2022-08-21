@@ -10,16 +10,18 @@ import javax.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity(name = "MEMBER")
 @Getter
+@ToString
 public class Member implements Serializable {
 
     @Serial
     private static final long serialVersionUID = -417466597408022844L;
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "ID", nullable = false)

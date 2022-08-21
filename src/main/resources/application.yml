@@ -2,11 +2,9 @@ spring:
   profiles:
     group:
       local:
-        - db
         - h2
         - dev-tool
       prod:
-        - db
         - mysql
   messages:
     encoding: UTF-8
