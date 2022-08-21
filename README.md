@@ -1,4 +1,4 @@
-# REST STARTER
+# Rest Starter
 
 ## Running Locally
 
