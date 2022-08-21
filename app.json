@@ -1,11 +1,4 @@
 {
   "name" : "Start on Heroku: Java",
-  "description" : "A Java app, which can easily be deployed to Heroku.",
-  "environments" : {
-    "review" : {
-      "addons" : [
-        "cleardb:ignite"
-      ]
-    }
-  }
+  "description" : "A Java app, which can easily be deployed to Heroku."
 }
