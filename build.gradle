@@ -1,5 +1,6 @@
 import org.springframework.boot.gradle.plugin.SpringBootPlugin
 
+// management version
 buildscript {
     ext {
         spockVersion = "2.1-groovy-3.0"
@@ -13,6 +14,7 @@ plugins {
     id 'groovy'
 }
 
+// management version system
 apply plugin: 'io.spring.dependency-management'
 
 dependencyManagement {
