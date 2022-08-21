@@ -1,26 +1,17 @@
-import org.springframework.boot.gradle.plugin.SpringBootPlugin
-
 // management version
 buildscript {
     ext {
         spockVersion = "2.1-groovy-3.0"
         springVersion = '2.7.3'
+        springDependensyManagementVersion = '1.0.11.RELEASE'
     }
 }
 
 plugins {
-    id 'org.springframework.boot' version "${springVersion}" apply false
+    id 'org.springframework.boot' version "${springVersion}"
+    id 'io.spring.dependency-management' version "${springDependensyManagementVersion}"
     id 'java'
     id 'groovy'
-}
-
-// management version system
-apply plugin: 'io.spring.dependency-management'
-
-dependencyManagement {
-    imports {
-        mavenBom SpringBootPlugin.BOM_COORDINATES
-    }
 }
 
 repositories {
