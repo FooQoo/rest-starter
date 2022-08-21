@@ -4,8 +4,10 @@ spring:
       local:
         - h2
         - dev-tool
+        - swagger
       prod:
         - mysql
+        - swagger
     default: local
   messages:
     encoding: UTF-8

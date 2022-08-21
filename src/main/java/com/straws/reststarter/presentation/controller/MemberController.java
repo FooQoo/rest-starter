@@ -6,10 +6,12 @@ import com.straws.reststarter.presentation.dto.response.MemberListResponse;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequiredArgsConstructor
+@RequestMapping(path = "/v1")
 public class MemberController {
 
     private final MemberService memberService;
