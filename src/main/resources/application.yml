@@ -6,6 +6,7 @@ spring:
         - dev-tool
       prod:
         - mysql
+    default: local
   messages:
     encoding: UTF-8
   web:
