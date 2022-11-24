@@ -4,7 +4,7 @@ buildscript {
         spockVersion = "2.3-groovy-4.0"
         springVersion = '2.7.6'
         springDependencyManagementVersion = '1.1.0'
-        openApiVersion = '1.6.12'
+        openApiVersion = '1.6.13'
     }
 }
 
