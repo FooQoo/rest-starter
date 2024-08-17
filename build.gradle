@@ -21,7 +21,7 @@ repositories {
 
 group = 'com.straws'
 version = '1.0.0'
-sourceCompatibility = '17'
+sourceCompatibility = '21'
 
 dependencies {
     implementation(
