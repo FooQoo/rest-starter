@@ -3,7 +3,7 @@ buildscript {
     ext {
         spockVersion = "2.3-groovy-4.0"
         springVersion = '3.3.2'
-        springDependencyManagementVersion = '1.1.0'
+        springDependencyManagementVersion = '1.1.6'
         openApiVersion = '1.8.0'
     }
 }
