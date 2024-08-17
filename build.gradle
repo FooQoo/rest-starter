@@ -19,7 +19,7 @@ repositories {
     mavenCentral()
 }
 
-group = 'com.straws'
+group = 'com.dxjunkyard'
 version = '1.0.0'
 sourceCompatibility = '21'
 

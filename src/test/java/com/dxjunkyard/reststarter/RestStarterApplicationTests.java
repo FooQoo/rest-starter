@@ -1,4 +1,4 @@
-package com.straws.reststarter;
+package com.dxjunkyard.reststarter;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

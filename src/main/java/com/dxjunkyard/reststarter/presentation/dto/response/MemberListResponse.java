@@ -1,6 +1,6 @@
-package com.straws.reststarter.presentation.dto.response;
+package com.dxjunkyard.reststarter.presentation.dto.response;
 
-import com.straws.reststarter.domain.model.Member;
+import com.dxjunkyard.reststarter.domain.model.Member;
 import java.io.Serial;
 import java.io.Serializable;
 import java.util.List;

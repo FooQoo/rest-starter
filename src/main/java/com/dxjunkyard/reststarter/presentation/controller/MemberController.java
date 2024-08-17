@@ -1,8 +1,8 @@
-package com.straws.reststarter.presentation.controller;
+package com.dxjunkyard.reststarter.presentation.controller;
 
-import com.straws.reststarter.application.service.MemberService;
-import com.straws.reststarter.domain.model.Member;
-import com.straws.reststarter.presentation.dto.response.MemberListResponse;
+import com.dxjunkyard.reststarter.application.service.MemberService;
+import com.dxjunkyard.reststarter.domain.model.Member;
+import com.dxjunkyard.reststarter.presentation.dto.response.MemberListResponse;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;

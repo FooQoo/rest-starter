@@ -1,4 +1,4 @@
-package com.straws.reststarter.domain.repository
+package com.dxjunkyard.reststarter.domain.repository
 
 
 import org.springframework.beans.factory.annotation.Autowired

@@ -1,4 +1,4 @@
-package com.straws.reststarter.domain.model;
+package com.dxjunkyard.reststarter.domain.model;
 
 import java.io.Serial;
 import java.io.Serializable;

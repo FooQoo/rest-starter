@@ -1,7 +1,7 @@
-package com.straws.reststarter.application.service;
+package com.dxjunkyard.reststarter.application.service;
 
-import com.straws.reststarter.domain.model.Member;
-import com.straws.reststarter.domain.repository.MemberRepository;
+import com.dxjunkyard.reststarter.domain.model.Member;
+import com.dxjunkyard.reststarter.domain.repository.MemberRepository;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

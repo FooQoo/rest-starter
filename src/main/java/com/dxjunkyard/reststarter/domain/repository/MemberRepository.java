@@ -1,6 +1,6 @@
-package com.straws.reststarter.domain.repository;
+package com.dxjunkyard.reststarter.domain.repository;
 
-import com.straws.reststarter.domain.model.Member;
+import com.dxjunkyard.reststarter.domain.model.Member;
 import java.util.List;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
