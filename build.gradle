@@ -26,10 +26,9 @@ sourceCompatibility = '21'
 dependencies {
     implementation(
             // spring boot
-            "org.springframework.boot:spring-boot-starter-web",
+            "org.springframework.boot:spring-boot-starter-webflux",
             // mysql
-            'org.springframework.boot:spring-boot-starter-data-jpa',
-            'org.springframework.boot:spring-boot-starter-jdbc',
+            'org.springframework.boot:spring-boot-starter-data-r2dbc',
             // swagger
             "org.springdoc:springdoc-openapi-ui:${openApiVersion}",
     )
@@ -38,6 +37,8 @@ dependencies {
     )
     runtimeOnly(
             'com.h2database:h2',
+            'io.asyncer:r2dbc-mysql:1.2.0',
+            'io.r2dbc:r2dbc-h2',
             'mysql:mysql-connector-java',
             'org.springframework.boot:spring-boot-devtools',
     )

@@ -1,32 +1,22 @@
 package com.dxjunkyard.reststarter.domain.model;
 
-import java.io.Serial;
 import java.io.Serializable;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import java.util.Objects;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.relational.core.mapping.Column;
+import org.springframework.data.relational.core.mapping.Table;
 
-@AllArgsConstructor
-@NoArgsConstructor
-@Entity(name = "MEMBER")
-@Getter
-@ToString
-public class Member implements Serializable {
+@Table
+public record Member(
+        @Id
+        @Column(value = "ID")
+        Long id,
 
-    @Serial
-    private static final long serialVersionUID = -417466597408022844L;
+        @Column(value = "NAME")
+        String name
+) implements Serializable {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "ID", nullable = false)
-    private Long id;
-
-    @Column(name = "NAME")
-    private String name;
+    public Member {
+        Objects.requireNonNull(name, "name must not be null");
+    }
 }

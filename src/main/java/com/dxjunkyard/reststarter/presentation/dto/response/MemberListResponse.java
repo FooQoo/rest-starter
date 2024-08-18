@@ -1,18 +1,19 @@
 package com.dxjunkyard.reststarter.presentation.dto.response;
 
 import com.dxjunkyard.reststarter.domain.model.Member;
-import java.io.Serial;
 import java.io.Serializable;
 import java.util.List;
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
 
-@RequiredArgsConstructor(staticName = "of")
-@Getter
-public class MemberListResponse implements Serializable {
+public record MemberListResponse(
+        List<MemberResponse> members
+) implements Serializable {
 
-    @Serial
-    private static final long serialVersionUID = -116789077993324331L;
+    public static MemberListResponse of(final List<Member> members) {
 
-    private final List<Member> members;
+        final var memberResponses = members.stream()
+                .map(MemberResponse::from)
+                .toList();
+
+        return new MemberListResponse(memberResponses);
+    }
 }
