@@ -1,6 +1,6 @@
 package com.dxjunkyard.reststarter.domain.repository
 
-
+import com.dxjunkyard.reststarter.infrastructure.db.repository.crud.MemberCrudRepository
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.test.context.ActiveProfiles
@@ -10,10 +10,10 @@ import spock.lang.Specification
 @SpringBootTest
 @ActiveProfiles("test")
 @Sql(["classpath:/schema/member_schema.sql", "classpath:/data/import_member.sql"])
-class MemberRepositorySpec extends Specification {
+class MemberEntityRepositorySpec extends Specification {
 
     @Autowired
-    MemberRepository memberRepository
+    MemberCrudRepository memberRepository
 
     def "findAll"() {
         when:

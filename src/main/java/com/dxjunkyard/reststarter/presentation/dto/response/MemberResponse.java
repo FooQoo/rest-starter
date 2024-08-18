@@ -8,8 +8,9 @@ import java.util.Objects;
 
 
 public record MemberResponse(
-        Long id,
-        String name
+        Integer id,
+        String name,
+        String positionName
 ) implements Serializable {
     public MemberResponse {
         Objects.requireNonNull(id, "id must not be null");
@@ -18,6 +19,10 @@ public record MemberResponse(
 
     @NonNull
     public static MemberResponse from(final Member member) {
-        return new MemberResponse(member.id(), member.name());
+        return new MemberResponse(
+                member.getMemberId(),
+                member.getName(),
+                member.getCompanyPosition().getName()
+        );
     }
 }

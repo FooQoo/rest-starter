@@ -7,9 +7,7 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 @Getter
 @Builder
-public class Member {
-
-    private final Integer memberId;
+public class CompanyPosition {
+    private final Integer companyPositionId;
     private final String name;
-    private final CompanyPosition companyPosition;
 }

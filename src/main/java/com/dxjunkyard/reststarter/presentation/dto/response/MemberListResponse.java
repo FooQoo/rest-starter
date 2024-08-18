@@ -8,9 +8,9 @@ public record MemberListResponse(
         List<MemberResponse> members
 ) implements Serializable {
 
-    public static MemberListResponse of(final List<Member> members) {
+    public static MemberListResponse from(final List<Member> memberEntities) {
 
-        final var memberResponses = members.stream()
+        final var memberResponses = memberEntities.stream()
                 .map(MemberResponse::from)
                 .toList();
 
